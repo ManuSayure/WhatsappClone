@@ -30,12 +30,15 @@ function RootNavigator() {
     <Stack.Navigator screenOptions={{ 
       headerStyle: {
         backgroundColor: Colors.light.tint,
+        shadowOpacity:0,
+        elevation:0,
       },
       headerTintColor: Colors.light.background,
       headerTitleAlign: 'left',
       headerTitleStyle: {
         fontWeight: 'bold',
-      }
+      },
+      headerShown:true,
      }}>
       <Stack.Screen name="Root" 
         component={MainTabNavigator} 
