@@ -131,7 +131,7 @@ export default [{
     users: [{
       id: 'u1',
       name: 'Vadim',
-      imageUri:  '../../assets/images/avatar/avatar02.png',
+      imageUri:  '../../assets/images/avatar/avatar01.png',
     }, {
       id: 'u10',
       name: 'Angelina Jolie',
