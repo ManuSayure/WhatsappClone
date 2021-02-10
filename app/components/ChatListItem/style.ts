@@ -17,8 +17,7 @@ const styles = StyleSheet.create({
     },
     midContainer:{
         marginLeft:0,
-        justifyContent: 'space-around',
-       
+        justifyContent: 'space-between',       
 
     },
     avatar:{
@@ -37,9 +36,10 @@ const styles = StyleSheet.create({
         width: '100%',   
     },
     time:{
-        fontSize:16,
+        fontSize:14 ,
         color: 'grey',
-        
+        position: 'absolute',
+        right: 10 ,        
     },
 });
 export default styles;
