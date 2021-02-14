@@ -1,13 +1,31 @@
 import {StyleSheet} from 'react-native';
+import Colors from '../../constants/Colors';
 
 const styles = StyleSheet.create({
-    caontiner:{
-
+    container:{
+        padding: 10,
+    
     }, 
     messageBox:{
-        backgroundColor:'#e5e5e5',
-        marginLeft:10,      
+        marginRight:50, 
+        padding: 10 ,
+        borderRadius: 5,   
+
+    },
+    name:{
+        color: Colors.light.tint,
+        fontWeight: 'bold',
+        marginBottom: 5, 
+
+    },
+    message:{
+      
+    },
+    time:{
+        alignSelf: 'flex-end',
+        color: 'gray', 
 
     }
+
 
 }); export default styles;

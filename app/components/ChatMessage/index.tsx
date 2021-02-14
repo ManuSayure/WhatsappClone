@@ -1,25 +1,34 @@
 import * as React from 'react';
 import { Text } from 'react-native';
 import { Message } from '../../types';
-import { View } from '../Themed';
+import { View } from 'react-native';
 import moment from 'moment';
 import styles from './styles';
 
 export type ChatMessageProps={
     message: Message;
-     
 }
 
-
 const ChatMessage = (props: ChatMessageProps) => {
+    const isMyMessage = () => {
+        return message.user.id === 'u1';
+    }
+    
     const { message } = props;
     console.log(message)
     return(
         <View style={styles.container}>
-            <View style={styles.messageBox}>
-                <Text>{ message.user.name }</Text>
-                <Text>{ message.content }</Text>
-                <Text>{ moment(message.createdAt).fromNow() }</Text>
+            <View style={[
+                styles.messageBox, 
+                    {
+                        backgroundColor: isMyMessage()? '#DCF8C5' : 'white',
+                        marginLeft: isMyMessage()? 50 : 0,
+                        marginRight: isMyMessage()? 0 : 50,
+                    }
+            ]}>
+               {!isMyMessage() && <Text style={styles.name}>{ message.user.name }</Text>}
+                <Text style={styles.message}>{ message.content }</Text>
+                <Text style={styles.time}>{ moment(message.createdAt).fromNow() }</Text>
             </View>
         </View>
        
