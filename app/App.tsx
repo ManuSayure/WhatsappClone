@@ -16,7 +16,13 @@ export default function App() {
     return (
       <SafeAreaProvider>
         <Navigation colorScheme={colorScheme} />
-        <StatusBar />
+        <StatusBar
+         
+         hidden = {false}
+         backgroundColor = "#0066CC"
+         translucent = {false}
+         networkActivityIndicatorVisible = {true}
+        />
       </SafeAreaProvider>
     );
   }
